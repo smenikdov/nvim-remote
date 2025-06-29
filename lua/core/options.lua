@@ -15,9 +15,6 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 g.autoformat = false
 g.omni_sql_no_default_maps = 1
-g.codeium_filetypes = {
-    typr = false
-}
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
@@ -27,27 +24,6 @@ opt.swapfile = false -- Don't use swapfile
 opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
 opt.wrap = false
 opt.spelloptions = "camel"
-
-
--- CODEIUM (windsurf)
-g.codeium_enabled = true
-g.codeium_disable_bindings = 1
-
--- LAZYGIT
--- vim.api.nvim_create_autocmd({ "BufLeave" }, {
---     pattern = { "*lazygit*" },
---     group = vim.api.nvim_create_augroup("git_refresh_neotree", {clear = true}),
---     callback = function()
---         require("neo-tree.sources.filesystem.commands").refresh(
---             require("neo-tree.sources.manager").get_state("filesystem")
---         )
---     end,
--- })
-
-vim.api.nvim_create_user_command('AA', 'terminal aichat <args>', { nargs = '*' })
-vim.api.nvim_create_user_command('AC', 'terminal aichat --role \\%code\\% <args>', { nargs = '*' })
--- норм работает, но пока не пользуюсь, можно лучше придумать
--- vim.api.nvim_create_user_command('Rg', 'silent grep <args>', { nargs = '+' })
 
 -----------------------------------------------------------
 -- Neovim UI
